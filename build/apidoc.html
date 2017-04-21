@@ -1,0 +1,128 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/GitbookIO/plugin-youtube"
+
+    >gitbook-plugin-youtube (v2.0.0)</a>
+</h1>
+<h4>Insert Youtube videos in your pages.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitbook-plugin-youtube">module gitbook-plugin-youtube</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitbook-plugin-youtube.</span>blocks</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitbook-plugin-youtube.blocks">module gitbook-plugin-youtube.blocks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitbook-plugin-youtube.blocks.youtube">
+            function <span class="apidocSignatureSpan">gitbook-plugin-youtube.blocks.</span>youtube
+            <span class="apidocSignatureSpan">(block)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitbook-plugin-youtube" id="apidoc.module.gitbook-plugin-youtube">module gitbook-plugin-youtube</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitbook-plugin-youtube.blocks" id="apidoc.module.gitbook-plugin-youtube.blocks">module gitbook-plugin-youtube.blocks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitbook-plugin-youtube.blocks.youtube" id="apidoc.element.gitbook-plugin-youtube.blocks.youtube">
+        function <span class="apidocSignatureSpan">gitbook-plugin-youtube.blocks.</span>youtube
+        <span class="apidocSignatureSpan">(block)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">youtube = function (block) {
+    // Try parsing src property to get Youtube videoId
+    var videoId = getYouTubeID(block.kwargs.src) || block.kwargs.src;
+
+    return {
+       isVideo:   this.output.name === &#x27;website&#x27;,
+       url:       `https://www.youtube.com/embed/${videoId}`,
+       // Get thumbnail for E-Books version
+       // 0.jpg is default full resolution image. 1–3.jpg is thumbnails
+       thumbnail: `https://img.youtube.com/vi/${videoId}/0.jpg`
+   };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
